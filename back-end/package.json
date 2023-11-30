@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "setup-project": "npm i && cd ../Front-end && npm i",
-    "server": "nodemon server",
+    "start": "nodemon server",
     "client": "cd ../front-end && npm run dev",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "dev": "concurrently --kill-others-on-fail \"npm start\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
