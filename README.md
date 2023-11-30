@@ -62,7 +62,7 @@ echo "$content" > "$file_name"
 cd front-end && npm i && cd ../back-end && npm i
 ```
 
-4. Launch the project
+4. Run and test the project
 ```bash
 npm run dev  
 ```
