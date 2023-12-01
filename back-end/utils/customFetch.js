@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const customFetch = axios.create({
-  baseURL: "http://localhost:5173/api/v1",
+  baseURL: "https://koyo-app-api.onrender.com",
 });
 
 export default customFetch;
