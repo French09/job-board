@@ -6,6 +6,7 @@ const app = express();
 import morgan from "morgan";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
+import cors from "cors"; 
 
 // routers
 import jobRouter from "./routes/jobRouter.js";
@@ -26,6 +27,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5173", // Allow requests from this origin
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Allow cookies to be sent with the request
+    optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
+  })
+);
 app.use(
   express.static(path.resolve(__dirname, "../../T-WEB-501-PAR_36/public"))
 );
