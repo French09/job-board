@@ -22,7 +22,7 @@ import path from "path";
 import errorHandlerMiddleware from "./middleware/errorHandlerMiddleware.js";
 import { authenticateUser } from "./middleware/authMiddleware.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// const __dirname = dirname(fileURLToPath(import.meta.url));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -30,14 +30,14 @@ if (process.env.NODE_ENV === "development") {
 app.use(
   cors({
     origin: "https://koyo-app-client.onrender.com/", // Allow requests from this origin
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Allow cookies to be sent with the request
     optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
   })
 );
-app.use(
-  express.static(path.resolve(__dirname, "../../T-WEB-501-PAR_36/public"))
-);
+// app.use(
+//   express.static(path.resolve(__dirname, "../../T-WEB-501-PAR_36/public"))
+// );
 
 app.use(cookieParser());
 app.use(express.json());
