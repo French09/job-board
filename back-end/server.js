@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "development") {
 }
 app.use(
   cors({
-    origin: "https://koyo-app-client.onrender.com/", // Allow requests from this origin
+    origin: "https://koyo-app-client.onrender.com", // Allow requests from this origin
     // methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Allow cookies to be sent with the request
     optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
